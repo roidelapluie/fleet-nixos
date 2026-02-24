@@ -13,10 +13,10 @@ diff --git a/orbit/cmd/orbit/orbit.go b/orbit/cmd/orbit/orbit.go
  		&cli.StringFlag{
  			Name:    "root-dir",
  			Usage:   "Root directory for Orbit state",
-@@ -603,7 +608,11 @@ func main() {
- 		// it fetches osqueryd once as part of initialization.
+@@ -605,7 +610,11 @@ func main() {
  		var updater *update.Updater
  		var updateRunner *update.Runner
+ 		var osqueryVersion string
 -		if !c.Bool("disable-updates") || c.Bool("dev-mode") {
 +
 +		if override := c.String("osqueryd-path"); override != "" {
