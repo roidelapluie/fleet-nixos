@@ -8,7 +8,7 @@
     sha256 = "sha256-jp3WqUAUoFJ+k/Cc0tOG24qgdV3K8X0GQOkCdninn2w=";
   };
 
-  vendorHash = "sha256-S2rB23qulG1NK8R6zHg0fSkvp10Lwupm4Xf+otSiWro=";
+  vendorHash = "sha256-fFKwWa2OjQTdpVdgIH0VPv3CSOji6DrWy2e2tOqm+7Q=";
   commit = "490a193a5eb97d2f29769412f0f0f3f805999f63";
   date = "2025-12-12T14:46:25Z";
 
