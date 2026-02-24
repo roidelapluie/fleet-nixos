@@ -1,8 +1,7 @@
 diff --git a/orbit/cmd/orbit/orbit.go b/orbit/cmd/orbit/orbit.go
-index 5aba888849..3650578096 100644
 --- a/orbit/cmd/orbit/orbit.go
 +++ b/orbit/cmd/orbit/orbit.go
-@@ -85,6 +85,11 @@ func main() {
+@@ -92,6 +92,11 @@ func main() {
  		shellCommand,
  	}
  	app.Flags = []cli.Flag{
@@ -14,7 +13,7 @@ index 5aba888849..3650578096 100644
  		&cli.StringFlag{
  			Name:    "root-dir",
  			Usage:   "Root directory for Orbit state",
-@@ -587,7 +592,11 @@ func main() {
+@@ -603,7 +608,11 @@ func main() {
  		// it fetches osqueryd once as part of initialization.
  		var updater *update.Updater
  		var updateRunner *update.Runner

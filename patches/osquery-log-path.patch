@@ -1,8 +1,7 @@
 diff --git a/orbit/cmd/orbit/orbit.go b/orbit/cmd/orbit/orbit.go
-index 5aba888849..1aa7291d4e 100644
 --- a/orbit/cmd/orbit/orbit.go
 +++ b/orbit/cmd/orbit/orbit.go
-@@ -230,6 +230,11 @@ func main() {
+@@ -237,6 +237,11 @@ func main() {
  			Usage:   "Sets a custom osquery database directory, it must be an absolute path",
  			EnvVars: []string{"ORBIT_OSQUERY_DB"},
  		},
@@ -11,11 +10,10 @@ index 5aba888849..1aa7291d4e 100644
 +			Usage:   "Path to osquery log file (optional)",
 +			EnvVars: []string{"NIX_ORBIT_OSQUERY_LOG_PATH"},
 +		},
- 	}
- 	app.Before = func(c *cli.Context) error {
- 		// handle old installations, which had default root dir set to /var/lib/orbit
-@@ -789,7 +794,11 @@ func main() {
- 			optionsAfterFlagfile []osquery.Option
+ 		&cli.BoolFlag{
+ 			Name:    "fleet-managed-host-identity-certificate",
+ 			Usage:   "Configures fleetd to use TPM-backed key to sign HTTP requests. This functionality is licensed under the Fleet EE License. Usage requires a current Fleet EE subscription.",
+@@ -844,7 +849,11 @@ func main() {
  		)
  		options = append(options, osquery.WithDataPath(c.String("root-dir"), ""))
 -		options = append(options, osquery.WithLogPath(filepath.Join(c.String("root-dir"), "osquery_log")))
